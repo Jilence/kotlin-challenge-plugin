@@ -1,8 +1,8 @@
-name: ExamplePlugin
+name: ChallengePlugin
 api-version: 1.17
 authors:
-  - You
-main: org.example.exampleplugin.ExamplePlugin
+  - Jilence
+main: com.jilence.challenge.ChallengePlugin
 version: 1.0.0
 libraries:
   - "net.axay:kspigot:1.17.2"
