@@ -1,22 +1,24 @@
 package com.jilence.challenge
 
-import com.jilence.challenge.challenge.Builder
-import com.jilence.challenge.challenges.noBlockBreak
-import com.jilence.challenge.utils.PluginType
+import com.jilence.challenge.manager.Challenge
+import com.jilence.challenge.utils.Scheduler
 import net.axay.kspigot.main.KSpigot
+import java.util.*
 
-lateinit var plugin: Builder
+
+lateinit var main: ChallengePlugin
 
 class ChallengePlugin : KSpigot() {
 
     override fun startup() {
+        main = this
+        Scheduler().start()
 
-        plugin = Builder(PluginType.DEVELOPMENT)
+        loadChallenge()
+    }
 
-        plugin.apply {
-            noBlockBreak()
-        }
-
+    private fun loadChallenge() {
+        //call the #onLoad function in every class that extend the Challenge class
     }
 
     override fun shutdown() {

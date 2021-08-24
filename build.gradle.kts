@@ -16,6 +16,7 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
     implementation("net.axay:kspigot:1.17.2")
+    implementation("org.reflections:reflections:0.9.12")
 }
 
 tasks {
