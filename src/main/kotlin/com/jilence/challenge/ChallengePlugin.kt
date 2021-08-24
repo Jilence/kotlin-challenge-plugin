@@ -1,6 +1,7 @@
 package com.jilence.challenge
 
 import com.jilence.challenge.manager.Challenge
+import com.jilence.challenge.manager.Challenges
 import com.jilence.challenge.utils.Scheduler
 import net.axay.kspigot.main.KSpigot
 import java.util.*
@@ -14,11 +15,7 @@ class ChallengePlugin : KSpigot() {
         main = this
         Scheduler().start()
 
-        loadChallenge()
-    }
-
-    private fun loadChallenge() {
-        //call the #onLoad function in every class that extend the Challenge class
+        Challenges.loadChallenge()
     }
 
     override fun shutdown() {

@@ -7,10 +7,10 @@ import com.jilence.challenge.manager.ChallengeType
 class TestChallenge : Challenge {
 
     override val challenge: Builder
-        get() = Builder("Test Challenge", "test_challenge", ChallengeType.DEVELOPER, this)
+        get() = Builder("Test Challenge", "test_challenge", ChallengeType.DEVELOPER)
 
     override fun onLoad() {
-        challenge.build()
+        println("load")
     }
 
     override fun onTick() {
